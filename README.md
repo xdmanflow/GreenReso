@@ -21,13 +21,9 @@
 
 ## About the Project
 
-**GreenReso** is a French IoT company founded in 2019 in Nantes, employing 40 people across 3 sites and 5 departments (Management, HR, Accounting, Sales, and Support). The company specializes in the design, deployment, and maintenance of intelligent sensors aimed at optimizing the energy consumption of office buildings. With an annual growth rate of 25%, it is establishing itself as a key player in the digital energy transition.
+GreenReso is a French IoT company founded in 2019 in Nantes, with 40 employees across 3 sites and 5 departments. It designs and manages smart sensors to optimize office energy consumption, growing at 25% annually. Its SaaS platform, GreenPilot, provides real-time energy monitoring for clients including public institutions and major corporations.
 
-The company operates a subscription-based SaaS platform called **GreenPilot**, enabling real-time visualization of energy consumption data. GreenReso works with a wide range of clients including local authorities, public institutions, and CAC 40 companies.
-
-Despite its rapid growth, the company's Information System remained largely unstructured — no unified user management, no password policy, manual backups on external hard drives, and widespread use of personal USB sticks for business documents. Following a data leak incident involving a customer file, management decided to take action.
-
-This project was carried out as part of an IT infrastructure design exercise. The goal was to fully professionalize GreenReso's Information System — improving **security**, **document structuring**, and **employee experience** across all sites — while aligning with digital sobriety (DDRS) principles.
+Despite this growth, its Information System was poorly structured (no centralized user management, weak security practices, manual backups). After a data leak, the company launched a project to professionalize its IT infrastructure—focusing on security, document organization, and employee experience, while aligning with digital sustainability principles.
 
 ### Project Scope
 
