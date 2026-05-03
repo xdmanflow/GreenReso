@@ -20,9 +20,7 @@
 
 ## About the Project
 
-GreenReso is a French IoT company founded in 2019 in Nantes, with 40 employees across 3 sites and 5 departments. It designs and manages smart sensors to optimize office energy consumption, growing at 25% annually. Its SaaS platform, GreenPilot, provides real-time energy monitoring for clients including public institutions and major corporations.
-
-Despite this growth, its Information System was poorly structured (no centralized user management, weak security practices, manual backups). After a data leak, the company launched a project to professionalize its IT infrastructure—focusing on security, document organization, and employee experience, while aligning with digital sustainability principles.
+GreenReso is a French IoT company founded in 2019 in Nantes, with 40 employees across 3 sites and 5 departments. It designs and manages smart sensors to optimize office energy consumption, growing at 25% annually. Its SaaS platform, GreenPilot, provides real-time energy monitoring for clients including public institutions and major corporations. Despite this growth, its Information System was poorly structured (no centralized user management, weak security practices, manual backups). After a data leak, the company launched a project to professionalize its IT infrastructure—focusing on security, document organization, and employee experience, while aligning with digital sustainability principles.
 
 ### Project Scope
 
