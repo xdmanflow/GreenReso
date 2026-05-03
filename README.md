@@ -13,7 +13,6 @@
 - [Access Rights Matrix](#access-rights-matrix)
 - [Key Security Measures](#key-security-measures)
 - [Technical Requirements](#technical-requirements)
-- [PowerShell Scripts](#powershell-scripts)
 - [Project Structure](#project-structure)
 - [Team & Contributions](#team--contributions)
 
@@ -50,7 +49,7 @@ Despite this growth, its Information System was poorly structured (no centralize
 
 ## Deliverables
 
-### Deliverable 1 — Final Infrastructure Diagram (`Final Infrastructure Diagram.pdf`)
+### Deliverable 1 — Infrastructure Diagram (`Diagramme de l'architecture.pdf`)
 
 A logical network view of GreenReso's target IS architecture, including:
 
@@ -132,30 +131,13 @@ A comprehensive technical document detailing:
 
 ---
 
-## PowerShell Scripts
-
-### `New-GreenResoUser.ps1` — HR Account Provisioning
-
-Designed for autonomous use by the HR team. Creates a new Active Directory user account, assigns the correct security groups based on department, and provisions a personal folder with appropriate NTFS permissions.
-
-### `New-FolderTree.ps1` — Department Folder Structure
-
-Automatically generates the full shared folder tree for all departments, applying NTFS rights according to the access matrix defined above.
-
----
-
 ## Project Structure
 
 ```
 greenreso-is-security/
-├── diagrams/
-│   └── Diagramme de l'architecture.pdf     # Network & IS architecture diagram
-├── docs/
-│   ├── GreenReso_Cybersecurity_Awareness_Guide.docx
-│   └── Final Report of the IS Security Project.pdf
-├── scripts/
-│   ├── New-GreenResoUser.ps1               # HR account creation script
-│   └── New-FolderTree.ps1                  # Folder tree + NTFS rights
+├── Final Infrastructure Diagram.pdf                 # Network & IS architecture diagram
+├── Final Report of the IS Security Project.pdf      # Full technical report
+├── GreenReso_Cybersecurity_Awareness_Guide.docx     # Awareness document for employees
 └── README.md
 ```
 
@@ -178,7 +160,6 @@ This project was developed by the following team:
 - Branch naming: `feature/<feature-name>`, `fix/<issue-name>`
 - Commit messages must be clear, concise, and written in English
 - Pull Requests require peer review before merging
-
 ---
 
 ## License
