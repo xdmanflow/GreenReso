@@ -132,7 +132,7 @@ A comprehensive technical document detailing:
 ## Project Structure
 
 ```
-greenreso-is-security/
+greenreso/
 ├── Final Infrastructure Diagram.pdf                 # Network & IS architecture diagram
 ├── Final Report of the IS Security Project.pdf      # Full technical report
 ├── GreenReso_Cybersecurity_Awareness_Guide.docx     # Awareness document for employees
