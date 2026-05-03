@@ -90,8 +90,6 @@ A comprehensive technical document detailing:
 
 ## Contributors
 
-Project completed as part of an IT Systems Design course.
-
 | Name | Role |
 |---|---|
 | Manil Doudou | Developer |
