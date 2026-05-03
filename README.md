@@ -47,8 +47,7 @@ GreenReso is a French IoT company founded in 2019 in Nantes, with 40 employees a
 
 ## Deliverables
 
-### Deliverable 1 — Infrastructure Diagram (`Diagramme de l'architecture.pdf`)
-
+### Deliverable 1 — Infrastructure Diagram 
 A logical network view of GreenReso's target IS architecture, including:
 
 - Active Directory, File Server, DNS
@@ -56,7 +55,7 @@ A logical network view of GreenReso's target IS architecture, including:
 - Distribution of workstations across the three sites
 - Main servers and their roles
 
-### Deliverable 2 — Cybersecurity Awareness Guide (`GreenReso_Cybersecurity_Awareness_Guide.docx`)
+### Deliverable 2 — Cybersecurity Awareness Guide 
 
 A non-technical document aimed at all GreenReso employees, covering:
 
@@ -64,7 +63,7 @@ A non-technical document aimed at all GreenReso employees, covering:
 - Simple, actionable countermeasures for every employee profile
 - Designed for use during onboarding sessions or team meetings
 
-### Deliverable 3 — Final Technical Report (`Final Report of the IS Security Project.pdf`)
+### Deliverable 3 — Final Technical Report 
 
 A comprehensive technical document detailing:
 
