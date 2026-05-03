@@ -54,7 +54,7 @@ This project was carried out as part of an IT infrastructure design exercise. Th
 
 ## Deliverables
 
-### Deliverable 1 — Infrastructure Diagram (`Diagramme de l'architecture.pdf`)
+### Deliverable 1 — Final Infrastructure Diagram (`Final Infrastructure Diagram.pdf`)
 
 A logical network view of GreenReso's target IS architecture, including:
 
