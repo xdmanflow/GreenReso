@@ -1,58 +1,94 @@
 # GreenReso – IS Security Project
 
-> Academic project | Information Systems Design & Cybersecurity  
-> Completed: November 2025
+> Information System design & cybersecurity project developed for **GreenReso** — built for enterprise-grade infrastructure and data security.
 
 ---
 
-## Context
+## Table of Contents
 
-**GreenReso** is a French IoT company (40 employees, 3 sites) specializing in intelligent sensors for energy optimization in office buildings. The company operates a SaaS platform called **GreenPilot** and works with local authorities, public institutions, and CAC 40 companies.
-
-This project was carried out as part of an IT infrastructure design exercise. The goal was to professionalize GreenReso's Information System to improve **security**, **document structuring**, and **employee experience** — while respecting digital sobriety principles.
+- [About the Project](#about-the-project)
+- [Project Roadmap](#project-roadmap)
+- [Deliverables](#deliverables)
+- [IS Architecture Overview](#is-architecture-overview)
+- [Access Rights Matrix](#access-rights-matrix)
+- [Key Security Measures](#key-security-measures)
+- [Technical Requirements](#technical-requirements)
+- [PowerShell Scripts](#powershell-scripts)
+- [Project Structure](#project-structure)
+- [Team & Contributions](#team--contributions)
 
 ---
 
-## Objectives
+## About the Project
 
-- Design a secure and structured IS architecture
-- Centralize document storage with role-based access (NTFS + Active Directory)
-- Automate HR processes (account creation, folder provisioning)
-- Raise cybersecurity awareness across all employee profiles
-- Align the IS with DDRS (digital sobriety) principles
+**GreenReso** is a French IoT company founded in 2019 in Nantes, employing 40 people across 3 sites and 5 departments (Management, HR, Accounting, Sales, and Support). The company specializes in the design, deployment, and maintenance of intelligent sensors aimed at optimizing the energy consumption of office buildings. With an annual growth rate of 25%, it is establishing itself as a key player in the digital energy transition.
+
+The company operates a subscription-based SaaS platform called **GreenPilot**, enabling real-time visualization of energy consumption data. GreenReso works with a wide range of clients including local authorities, public institutions, and CAC 40 companies.
+
+Despite its rapid growth, the company's Information System remained largely unstructured — no unified user management, no password policy, manual backups on external hard drives, and widespread use of personal USB sticks for business documents. Following a data leak incident involving a customer file, management decided to take action.
+
+This project was carried out as part of an IT infrastructure design exercise. The goal was to fully professionalize GreenReso's Information System — improving **security**, **document structuring**, and **employee experience** across all sites — while aligning with digital sobriety (DDRS) principles.
+
+### Project Scope
+
+| Item | Details |
+|------|---------|
+| Company | GreenReso |
+| Founded | 2019 — Nantes, France |
+| Employees | 40 across 5 departments |
+| Sites | 3 locations |
+| Platform | GreenPilot (outsourced hosting) |
+| Annual Growth | 25% |
+
+---
+
+## Project Roadmap
+
+| Deliverable | Focus | Status |
+|-------------|-------|--------|
+| **Deliverable 1** | Infrastructure diagram — logical network view, servers, segmentation | ✅ Completed |
+| **Deliverable 2** | Cybersecurity awareness document for non-IT employees | ✅ Completed |
+| **Deliverable 3** | Technical mock-up — AD, GPOs, PowerShell scripts, share tree | ✅ Completed |
 
 ---
 
 ## Deliverables
 
-### 1. Infrastructure Diagram (`Diagramme de l'architecture.pdf`)
+### Deliverable 1 — Infrastructure Diagram (`Diagramme de l'architecture.pdf`)
+
 A logical network view of GreenReso's target IS architecture, including:
+
 - Active Directory, File Server, DNS
 - Network segmentation by department
-- Distribution of workstations across sites
+- Distribution of workstations across the three sites
+- Main servers and their roles
 
-### 2. Cybersecurity Awareness Guide (`GreenReso_Cybersecurity_Awareness_Guide.docx`)
+### Deliverable 2 — Cybersecurity Awareness Guide (`GreenReso_Cybersecurity_Awareness_Guide.docx`)
+
 A non-technical document aimed at all GreenReso employees, covering:
-- Common digital threats (phishing, data leaks, weak passwords...)
-- Simple, actionable good practices
-- Designed for use during onboarding or team meetings
 
-### 3. Final Technical Report (`Final Report of the IS Security Project.pdf`)
+- Clear presentation of common digital threats (phishing, weak passwords, data leaks...)
+- Simple, actionable countermeasures for every employee profile
+- Designed for use during onboarding sessions or team meetings
+
+### Deliverable 3 — Final Technical Report (`Final Report of the IS Security Project.pdf`)
+
 A comprehensive technical document detailing:
+
 - Active Directory structure (OUs, Security Groups, GPOs)
-- Naming conventions (accounts, machines, groups)
-- Planned PowerShell scripts (account creation, folder tree with NTFS rights)
-- Share tree and access rights matrix
+- Naming conventions for accounts, machines, and groups
+- PowerShell automation scripts (account creation, NTFS folder provisioning)
+- Share tree and full access rights matrix
 
 ---
 
 ## IS Architecture Overview
 
 | Component | Solution |
-|---|---|
-| Directory Service | Windows Server – Active Directory |
+|-----------|----------|
+| Directory Service | Windows Server — Active Directory |
 | File Sharing | File Server with NTFS permissions |
-| User Management | AD Groups per department |
+| User Management | AD Security Groups per department |
 | Cloud Collaboration | Google Workspace (Drive, Meet, Gmail) |
 | Platform Hosting | External provider (outsourced) |
 | OS Migration | Windows 8 → Windows 11 (2-year roadmap) |
@@ -62,40 +98,90 @@ A comprehensive technical document detailing:
 ## Access Rights Matrix
 
 | Group | Common | Management | HR | Accounting | Sales | Support |
-|---|---|---|---|---|---|---|
-| Management | RW | RW | RW | RW | RW | RW |
-| HR | RW | | RW | R | | |
-| Accounting | RW | | R | RW | R | |
-| Sales | RW | | | | RW | R |
-| Support | RW | | | R | | RW |
+|-------|--------|------------|----|------------|-------|---------|
+| **Management** | RW | RW | RW | RW | RW | RW |
+| **HR** | RW | | RW | R | | |
+| **Accounting** | RW | | R | RW | R | |
+| **Sales** | RW | | | | RW | R |
+| **Support** | RW | | | R | | RW |
+
+> `RW` = Read & Write — `R` = Read only — *(empty)* = No access
 
 ---
 
 ## Key Security Measures
 
-- **Password policy** enforced via GPO
-- **Automatic workstation lock** after inactivity
-- **USB storage banned** (replaced by secure network shares)
-- **Restricted system settings** access for standard users
-- **Regular cybersecurity awareness** campaigns
+| Measure | Description |
+|---------|-------------|
+| Password Policy | Enforced via Group Policy Objects (GPO) |
+| Workstation Lock | Automatic lock after inactivity period |
+| USB Ban | Removable storage banned; replaced by secure network shares |
+| System Access | Standard users restricted from system settings |
+| Awareness | Regular cybersecurity awareness campaigns for all profiles |
+| Backups | Automated and structured backups replacing manual external drives |
 
 ---
 
-## PowerShell Scripts (planned)
+## Technical Requirements
 
-- `New-GreenResoUser.ps1` — HR-facing script to create AD accounts, assign groups, and provision personal folders
-- `New-FolderTree.ps1` — Automatically creates department folder structure with correct NTFS permissions
+| Constraint | Requirement |
+|------------|-------------|
+| Directory Service | Windows Server — Active Directory |
+| Architecture | Organizational Units (OUs) per department |
+| Group Policy | GPOs for security, lock screens, USB restriction |
+| Scripting | PowerShell — all scripts written in English |
+| Naming Convention | Standardized for accounts, groups, and machines |
+| OS | Windows 11 target (migration from Windows 8 over 2 years) |
+| Versioning | Git / GitHub |
 
 ---
 
-## Contributors
+## PowerShell Scripts
+
+### `New-GreenResoUser.ps1` — HR Account Provisioning
+
+Designed for autonomous use by the HR team. Creates a new Active Directory user account, assigns the correct security groups based on department, and provisions a personal folder with appropriate NTFS permissions.
+
+### `New-FolderTree.ps1` — Department Folder Structure
+
+Automatically generates the full shared folder tree for all departments, applying NTFS rights according to the access matrix defined above.
+
+---
+
+## Project Structure
+
+```
+greenreso-is-security/
+├── diagrams/
+│   └── Diagramme de l'architecture.pdf     # Network & IS architecture diagram
+├── docs/
+│   ├── GreenReso_Cybersecurity_Awareness_Guide.docx
+│   └── Final Report of the IS Security Project.pdf
+├── scripts/
+│   ├── New-GreenResoUser.ps1               # HR account creation script
+│   └── New-FolderTree.ps1                  # Folder tree + NTFS rights
+└── README.md
+```
+
+---
+
+## Team & Contributions
+
+This project was developed by the following team:
 
 | Name | Role |
-|---|---|
+|------|------|
 | Manil Doudou | Developer |
 | Maxime Moysset | Developer |
 | Youcef Djarir | Developer |
 | Quentin Chabres | Developer |
+
+### Workflow Guidelines
+
+- All work branches must be created from `main` or `develop`
+- Branch naming: `feature/<feature-name>`, `fix/<issue-name>`
+- Commit messages must be clear, concise, and written in English
+- Pull Requests require peer review before merging
 
 ---
 
@@ -103,4 +189,4 @@ A comprehensive technical document detailing:
 
 Copyright © 2026 **GreenReso**. All rights reserved.
 
-This software is proprietary and confidential. Unauthorized copying, distribution, modification, or use of this software, in whole or in part, is strictly prohibited without prior written consent from GreeReso.
+This software is proprietary and confidential. Unauthorized copying, distribution, modification, or use of this software, in whole or in part, is strictly prohibited without prior written consent from GreenReso.
