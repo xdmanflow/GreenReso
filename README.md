@@ -39,9 +39,9 @@ GreenReso is a French IoT company founded in 2019 in Nantes, with 40 employees a
 
 | Deliverable | Focus | Status |
 |-------------|-------|--------|
-| **Deliverable 1** | Infrastructure diagram — logical network view, servers, segmentation | ✅ Completed |
-| **Deliverable 2** | Cybersecurity awareness document for non-IT employees | ✅ Completed |
-| **Deliverable 3** | Technical mock-up — AD, GPOs, PowerShell scripts, share tree | ✅ Completed |
+| **Deliverable 1** | Infrastructure diagram — logical network view, servers, segmentation | Completed |
+| **Deliverable 2** | Cybersecurity awareness document for non-IT employees | Completed |
+| **Deliverable 3** | Technical mock-up — AD, GPOs, PowerShell scripts, share tree | Completed |
 
 ---
 
