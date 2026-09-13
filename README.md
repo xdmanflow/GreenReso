@@ -1,4 +1,4 @@
-# GreenReso – IS Security Project
+# GreenReso – Information System Security Project
 
 > Information System design & cybersecurity project developed for **GreenReso** — built for enterprise-grade infrastructure and data security.
 
